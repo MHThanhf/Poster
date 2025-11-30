@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lễ Hội Giáng Sinh Ấm Áp 2025 - HITC Khoa CNTT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CÀI ĐẶT CHUNG --- */
+        :root {
+            --gold-color: #FFD700;
+            --gold-dark: #B8860B;
+            --red-color: #C00;
+            --bg-dark: #0a1a3a; /* Màu nền xanh tối đêm đông */
+            --text-light: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            /* Tạo nền gradient xanh tối giống poster */
+            background: linear-gradient(to bottom, #051025 0%, #0a1a3a 50%, #1e3c72 100%);
+            color: var(--text-light);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* --- HEADER: LOGO & TÊN TRƯỜNG --- */
+        header {
+            padding: 20px 0;
+            border-bottom: 2px solid var(--gold-dark);
+            background: rgba(0,0,0,0.3); /* Nền mờ nhẹ */
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            width: 80px;
+            height: auto;
+            /* Hiệu ứng viền sáng cho logo */
+            filter: drop-shadow(0 0 5px var(--text-light));
+        }
+
+        .school-info {
+            text-align: left;
+        }
+
+        .school-info h2 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-light);
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        .school-info h3 {
+            margin: 5px 0 0 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--gold-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- MAIN CONTENT --- */
+        main {
+            flex: 1; /* Để đẩy footer xuống dưới cùng */
+            padding: 40px 0;
+            /* Ảnh nền trang trí mờ (Tùy chọn) */
+            background-image: url('https://via.placeholder.com/1920x1080/0a1a3a/ffffff?text=Snowy+Background'); /* Thay bằng ảnh nền làng tuyết nếu có */
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+        }
+
+        /* Tiêu đề chính */
+        .main-title-section {
+            margin-bottom: 50px;
+        }
+
+        h1.event-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 5rem;
+            margin: 0;
+            line-height: 1.1;
+            color: var(--red-color);
+            /* Hiệu ứng chữ vàng viền đỏ 3D */
+            text-shadow: 
+                3px 3px 0 var(--gold-color),
+                -1px -1px 0 var(--gold-color),  
+                1px -1px 0 var(--gold-color),
+                -1px 1px 0 var(--gold-color),
+                5px 5px 10px rgba(0,0,0,0.5);
+        }
+        
+        .sub-title {
+             font-family: 'Montserrat', sans-serif;
+             font-size: 2rem;
+             font-weight: 900;
+             color: var(--gold-color);
+             text-transform: uppercase;
+             letter-spacing: 5px;
+             margin-top: -10px;
+             text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        /* Phần hình ảnh trung tâm (Cây thông & Ông già Noel) */
+        .center-visuals {
+            margin: 30px auto;
+            max-width: 800px;
+        }
+        .center-visuals img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            /* Hiệu ứng phát sáng ấm áp xung quanh ảnh */
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Phần khách mời */
+        .guests-section {
+            margin-top: 60px;
+        }
+        
+        .section-heading {
+            font-size: 2rem;
+            color: var(--gold-color);
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .guest-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .guest-card {
+            background: linear-gradient(145deg, #1e3c72, #2a5298);
+            border: 3px solid var(--gold-color);
+            border-radius: 15px;
+            padding: 15px;
+            /* Hiệu ứng khung tranh vàng phát sáng */
+            box-shadow: 0 0 15px var(--gold-color), inset 0 0 10px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .guest-card:hover {
+            transform: translateY(-10px); /* Hiệu ứng nổi lên khi di chuột vào */
+        }
+
+        .guest-photo {
+            width: 100%;
+            height: 250px;
+            object-fit: cover; /* Đảm bảo ảnh không bị méo */
+            border-radius: 10px;
+            border: 2px solid var(--gold-dark);
+        }
+
+        .guest-name {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--gold-color);
+            text-transform: uppercase;
+        }
+
+        /* --- FOOTER & THÔNG TIN SỰ KIỆN --- */
+        footer {
+            margin-top: auto;
+            background: linear-gradient(to right, var(--gold-dark), var(--gold-color), var(--gold-dark));
+            color: #000; /* Chữ màu tối trên nền vàng */
+            padding: 30px 0;
+            /* Viền trên phát sáng */
+            box-shadow: 0 -5px 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .info-banner {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+        }
+
+        .info-item {
+            display: inline-block;
+            margin: 0 15px;
+        }
+        
+        .info-item i {
+            color: var(--red-color);
+            margin-right: 5px;
+        }
+
+        .cta-container {
+            background-color: rgba(0,0,0,0.1);
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 30px;
+            border: 2px solid #fff;
+        }
+
+        .cta-text {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--red-color);
+            text-transform: uppercase;
+        }
+
+        .qr-code-img {
+            width: 150px;
+            height: 150px;
+            border: 5px solid #fff;
+            border-radius: 10px;
+            background-color: #fff; /* Đảm bảo nền QR luôn trắng */
+        }
+
+        /* --- RESPONSIVE CHO ĐIỆN THOẠI --- */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .school-info {
+                text-align: center;
+            }
+            h1.event-title {
+                font-size: 3.5rem;
+            }
+            .sub-title {
+                font-size: 1.5rem;
+            }
+            .info-item {
+                display: block;
+                margin: 10px 0;
+            }
+            .cta-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .guest-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 cột trên điện thoại */
+            }
+        }
+        @media (max-width: 480px) {
+             .guest-grid {
+                grid-template-columns: 1fr; /* 1 cột trên màn hình rất nhỏ */
+            }
+            .guest-photo {
+                height: auto;
+                max-height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <img src="https://via.placeholder.com/150x150/ffffff/000000?text=HITC+Logo" alt="Logo HITC" class="logo">
+            
+            <div class="school-info">
+                <h2>TRƯỜNG CAO ĐẲNG CÔNG THƯƠNG TP.HỒ CHÍ MINH</h2>
+                <h3>KHOA CÔNG NGHỆ THÔNG TIN</h3>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="main-title-section">
+                <h1 class="event-title">Giáng Sinh</h1>
+                <div class="sub-title">LỄ HỘI ẤM ÁP</div>
+            </div>
+
+            <div class="center-visuals">
+                <img src="https://via.placeholder.com/800x450/0a1a3a/FFD700?text=Ảnh+Trung+Tâm+(Cây+thông,+Santa...)" alt="Không khí Giáng sinh ấm áp">
+            </div>
+
+            <section class="guests-section">
+                <h2 class="section-heading">✨ Khách Mời Đặc Biệt ✨</h2>
+                <div class="guest-grid">
+                    <div class="guest-card">
+                        <img src="https://via.placeholder.com/300x400/333/fff?text=Ảnh+ViruSs" alt="ViruSs" class="guest-photo">
+                        <p class="guest-name">ViruSs</p>
+                    </div>
+                    <div class="guest-card">
+                        <img src="https://via.placeholder.com/300x400/333/fff?text=Ảnh+Thùy+Tiên" alt="Hoa hậu Thùy Tiên" class="guest-photo">
+                        <p class="guest-name">Thùy Tiên</p>
+                    </div>
+                    <div class="guest-card">
+                        <img src="https://via.placeholder.com/300x400/333/fff?text=Ảnh+J97" alt="J97" class="guest-photo">
+                        <p class="guest-name">J97</p>
+                    </div>
+                    <div class="guest-card">
+                        <img src="https://via.placeholder.com/300x400/333/fff?text=Ảnh+Duy+Mạnh" alt="Duy Mạnh" class="guest-photo">
+                        <p class="guest-name">Duy Mạnh</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="info-banner">
+                <div class="info-item">
+                    📅 <strong>NGÀY:</strong> 25 Tháng 11, 2025
+                </div>
+                <div class="info-item">
+                    ⏰ <strong>GIỜ:</strong> 17H00
+                </div>
+                <div class="info-item">
+                    📍 <strong>ĐỊA ĐIỂM:</strong> Trường CĐ Công Thương TP.HCM
+                </div>
+            </div>
+
+            <div class="cta-container">
+                <div class="cta-text">
+                    ĐĂNG KÝ THAM GIA<br>QUA MÃ QR BÊN DƯỚI
+                </div>
+                <img src="https://via.placeholder.com/150x150/ffffff/000000?text=Mã+QR+Thật" alt="Quét mã QR để đăng ký" class="qr-code-img">
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
