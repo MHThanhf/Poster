@@ -145,6 +145,27 @@
             box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
         }
 
+        /* Phần thông tin giới thiệu */
+        .intro-container {
+            max-width: 800px;
+            margin: 0 auto 60px auto; /* Canh giữa và tạo khoảng cách */
+            padding: 20px;
+            background: rgba(0,0,0,0.2); /* Nền tối mờ nhẹ */
+            border-radius: 15px;
+            border-top: 1px solid var(--gold-color);
+            border-bottom: 1px solid var(--gold-color);
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            color: var(--text-cream); /* Màu chữ kem dễ đọc */
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .intro-text strong {
+            color: var(--gold-color);
+        }
+        
         /* Phần khách mời */
         .guests-section {
             margin-top: 60px;
@@ -158,6 +179,14 @@
             text-shadow: 2px 2px 4px #000;
         }
 
+        .guest-intro-text {
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            font-size: 1.1rem;
+            color: var(--text-cream);
+            font-style: italic;
+        }
+        
         .guest-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -310,8 +339,20 @@
                 <img src="https://cdn2.fptshop.com.vn/unsafe/Uploads/images/tin-tuc/152592/Originals/anh-giang-sinh-dep%20(15).jpg" alt="Không khí Giáng sinh ấm áp">
             </div>
 
+            <div class="intro-container">
+                <p class="intro-text">
+                    Hòa chung không khí rộn ràng của mùa lễ hội cuối năm, Khoa Công Nghệ Thông Tin - Trường CĐ Công Thương TP.HCM hân hoan chào đón toàn thể các bạn sinh viên đến với đại tiệc âm nhạc đặc biệt: <strong>"Giáng Sinh Ấm Áp 2025"</strong>.
+                </p>
+                <p class="intro-text">
+                    Đây không chỉ là một đêm nhạc hội, mà là nơi kết nối những trái tim trẻ nhiệt huyết, cùng nhau sẻ chia những khoảnh khắc diệu kỳ và tạo nên những kỷ niệm thanh xuân rực rỡ nhất dưới mái trường HITC. Hãy sẵn sàng để đắm chìm trong không gian âm nhạc bùng nổ và ấm áp tình bạn!
+                </p>
+            </div>
+            
             <section class="guests-section">
                 <h2 class="section-heading">✨ Khách Mời Đặc Biệt ✨</h2>
+                <p class="guest-intro-text">
+                    Đêm hội sẽ bùng nổ cảm xúc với sự xuất hiện của những gương mặt đình đám. Hãy chuẩn bị tinh thần để "cháy" hết mình cùng thần tượng!
+                </p>
                 <div class="guest-grid">
                     <div class="guest-card">
                         <img src="https://cafefcdn.com/203337114487263232/2025/3/24/46809348640087005326936212002837522307145189n-1742805438894970555559-1742809694198-17428096942762046265337.jpg" alt="ViruSs" class="guest-photo">
