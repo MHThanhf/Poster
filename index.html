@@ -52,26 +52,21 @@
         }
 
         .logo {
-            /* 1. Đặt kích thước cố định để tạo khung vuông */
-            width: 90px; 
+            /* 1. Đặt kích thước cố định (bạn có thể chỉnh số này to nhỏ tùy ý) */
+            width: 90px;
             height: 90px;
         
-            /* 2. Tạo nền trắng */
+            /* 2. Tạo nền trắng. Nền này sẽ hiện ra ở những chỗ trong suốt của bức ảnh logo */
             background-color: #ffffff;
         
-            /* 3. Biến khung vuông thành hình tròn hoàn hảo */
+            /* 3. Bo tròn cái nền trắng đó lại để nó khớp với hình dáng tròn của logo */
             border-radius: 50%;
         
-            /* 4. Căn giữa ảnh logo vào trong hình tròn trắng */
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            /* 4. QUAN TRỌNG NHẤT: Đặt padding bằng 0 để không có viền trắng thừa ra ngoài */
+            padding: 0;
         
-            /* 5. Thêm chút khoảng cách để logo không dính sát mép */
-            padding: 8px; 
-        
-            /* Đảm bảo ảnh logo bên trong không bị méo */
-            object-fit: contain;
+            /* Đảm bảo ảnh hiển thị dạng khối để nhận các thuộc tính trên */
+            display: block;
         }
 
         .school-info {
