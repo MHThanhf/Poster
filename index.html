@@ -52,13 +52,26 @@
         }
 
         .logo {
-            width: 80px;
-            height: auto;
-            /* Hiệu ứng viền sáng cho logo */
-           /*filter: drop-shadow(0 0 5px var(--text-light));*/
-            background-color: #ffffff; /* Thêm nền màu trắng */
-            padding: 5px; /* Thêm chút khoảng cách để logo không dính sát mép trắng */
-            border-radius: 50%; /* Bo tròn nền trắng lại cho đẹp */
+            /* 1. Đặt kích thước cố định để tạo khung vuông */
+            width: 90px; 
+            height: 90px;
+        
+            /* 2. Tạo nền trắng */
+            background-color: #ffffff;
+        
+            /* 3. Biến khung vuông thành hình tròn hoàn hảo */
+            border-radius: 50%;
+        
+            /* 4. Căn giữa ảnh logo vào trong hình tròn trắng */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            /* 5. Thêm chút khoảng cách để logo không dính sát mép */
+            padding: 8px; 
+        
+            /* Đảm bảo ảnh logo bên trong không bị méo */
+            object-fit: contain;
         }
 
         .school-info {
